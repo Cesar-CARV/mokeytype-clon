@@ -1,0 +1,27 @@
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn > svg {
+  color: var(--secundary-color);
+}
+
+.btn > span {
+  opacity: 0;
+  height: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover > span {
+  opacity: 1;
+  height: 1rem;
+  color: var(--white);
+}

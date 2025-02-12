@@ -1,0 +1,72 @@
+:root {
+  --background-color: #111;
+  --section-color: #191919;
+  --box-color: #313131;
+  --border-color: #4b4b4b;
+  --primary-color: #b8bb2e;
+  --secundary-color: #52532d;
+  --white: #edf0e9;
+}
+
+/* Css Reset june 2024 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  color: var(--secundary-color);
+  background-color: var(--background-color);
+  font-family: monospace;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+
+#root {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+}

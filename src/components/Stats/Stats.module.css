@@ -1,0 +1,35 @@
+.stats {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+
+
+.stats__wpm, .stats__errors {
+  font-size: 2em;
+}
+
+.stats__wpm {
+  color: rgb(73, 230, 34)
+}
+.stats__errors {
+  color: rgb(208, 42, 24);
+}
+
+.stats__button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 2em;
+  border: none;
+  border-radius: 2rem;
+  color: var(--secudary-color);
+  background-color: var(--section-color);
+  transition: color .5s ease-in-out;
+}
+
+.stats__button:hover {
+  background-color: var(--box-color);
+}

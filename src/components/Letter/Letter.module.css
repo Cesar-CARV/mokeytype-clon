@@ -1,0 +1,73 @@
+.letter {
+  position: relative;
+  display: inline-block;
+  padding: .3rem;
+  font-size: 1.2rem;
+  margin: 2px;
+  border-radius: 8px;
+}
+
+.letter--active::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  animation: blink 1s ease-in-out infinite;
+}
+
+.letter--correct {
+  color: var(--primary-color);
+  /* background-color: green; */
+}
+
+.letter--shaking {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    color: currentColor;
+  }
+
+  35% {
+    scale: 1.1;
+    transform: rotate(25deg);
+    color: red;
+    background-color: darkred;
+  }
+
+  70% {
+    scale: 1;
+    transform: rotate(-25deg);
+  }
+
+  100% {
+    color: currentColor;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (width >= 600px) {
+  .letter {
+    font-size: 2rem;
+  }
+}
