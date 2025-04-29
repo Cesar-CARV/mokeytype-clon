@@ -31,13 +31,13 @@ const AppProvider = ({ children }: IContextProviderProps) => {
       if (req.ok) {
         setLoading(false);
         setText(res.value);
+        setTyping(false);
       }
     } catch (error) {
       console.error(error);
       setText("Error on fetch api");
     }
   };
-
 
   useEffect(() => {
     setStateText();
@@ -46,7 +46,7 @@ const AppProvider = ({ children }: IContextProviderProps) => {
   useEffect(() => {
     setStateText();
     setTyping(false);
-  }, [time])
+  }, [time]);
 
   return (
     <AppContext.Provider
@@ -63,7 +63,7 @@ const AppProvider = ({ children }: IContextProviderProps) => {
         typing,
         setTyping,
         errors,
-        setErrors
+        setErrors,
       }}
     >
       {children}

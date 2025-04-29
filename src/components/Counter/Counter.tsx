@@ -4,7 +4,7 @@ import { IStateContext } from "../../types";
 import styles from "./Counter.module.css";
 
 export const Counter = () => {
-  const { time, typing, setTyping } = useContext(AppContext) as IStateContext;
+  const { time, typing, setTyping, text } = useContext(AppContext) as IStateContext;
 
   const [currentTime, setCurrentTime] = useState<number>(time);
 
@@ -30,7 +30,7 @@ export const Counter = () => {
       // Rest time
       setCurrentTime(time);
     }
-  }, [currentTime]);
+  }, [currentTime, text]);
 
   useEffect(() => {
     setCurrentTime(time);
